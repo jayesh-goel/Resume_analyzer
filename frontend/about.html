@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <i class="fas fa-file-alt"></i>
+                <span>Resume Analyzer</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <h1>Analyze Your Resume</h1>
+            <p>Get instant feedback and recommendations to improve your career prospects</p>
+            
+            <div class="upload-container">
+                <div class="upload-box" id="upload-box" onclick="document.getElementById('resume-file').click();">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Upload Your Resume</h3>
+                    <p>Drag & drop your PDF here or click to browse</p>
+                    <input type="file" id="resume-file" accept=".pdf" hidden onchange="handleFileUpload()">
+                </div>
+
+                <!-- File display section -->
+                <div id="file-info" class="file-info">
+                    <p>No file selected</p>
+                </div>
+
+                <button class="analyze-btn" onclick="uploadResume()">Analyze Resume</button>
+            </div>
+        </div>
+
+        <section class="features">
+            <h2>What You'll Get</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Resume Score</h3>
+                    <p>Get a detailed score based on industry standards</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Job Matches</h3>
+                    <p>Find the best matching job roles</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Skill Recommendations</h3>
+                    <p>Discover skills to improve your profile</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Learning Resources</h3>
+                    <p>Access curated courses and materials</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About the Project</h2>
+            <p>This system analyzes resumes and provides instant feedback. Based on the content of your resume, we offer a score, job role recommendations, and suggestions for improving your skills.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, feel free to <a href="mailto:info@resumeanalyzer.com">contact us</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Resume Analyzer. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

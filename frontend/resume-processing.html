@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis Results</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <i class="fas fa-file-alt"></i>
+                <span>Resume Analyzer</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="results-page">
+        <div class="results-container">
+            <h1>Resume Analysis Results</h1>
+            
+            <div class="score-card">
+                <div class="score-circle">
+                    <span id="resume-score">0</span>
+                    <span class="score-label">Score</span>
+                </div>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-section">
+                    <h2><i class="fas fa-briefcase"></i> Best Fit Job Roles</h2>
+                    <ul id="job-roles" class="results-list"></ul>
+                </div>
+
+                <div class="result-section">
+                    <h2><i class="fas fa-tools"></i> Skills to Improve</h2>
+                    <ul id="missing-skills" class="results-list"></ul>
+                </div>
+
+                <div class="result-section full-width">
+                    <h2><i class="fas fa-graduation-cap"></i> Recommended Courses</h2>
+                    <ul id="courses" class="courses-list"></ul>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="index.html" class="btn secondary">Analyze Another Resume</a>
+                <button class="btn primary" onclick="window.print()">Download Report</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Resume Analyzer. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
